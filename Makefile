@@ -20,9 +20,6 @@ uninstall:
 	mv */usr/bin/ex1.o */usr/bin/ex2.o .
 	mv */usr/lib/libex2.so .
 	rm -r $(firstword $(subst /, ,$(shell find */usr -type d)))
-
-here:
-	echo $(firstword $(subst /, ,$(shell find */usr -type d)))
 	
 	
 

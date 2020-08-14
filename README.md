@@ -1,12 +1,32 @@
-# Programing exercise
+# Programming exercise
 
-Copyright 2020 - Monaco F. J. <monaco@usp.br>
-This is Free Software distributed under GNU GPL v3 as detailed in
-https://www.gnu.org/licenses/gpl-3.0.txt
+## Instructions
 
-## Quick info
+Build:
 
-For the 2020 course on System Software.
+```bash
+make
+```
 
-Please, refer to file INSTRUCTIONS.
+Install (copy build files into the proper directories):
 
+```bash
+make install PREFIX=<folder_name>
+```
+
+Uninstall (undo install):
+
+```bash
+make uninstall
+```
+
+Before running, it is needed to set the path to libex2.so using:
+
+```bash
+export LD_LIBRARY_PATH=path/to/libex2
+```
+
+Run:
+```bash
+./ex1
+```
