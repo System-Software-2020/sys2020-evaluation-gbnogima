@@ -6,7 +6,7 @@ build_libex2:
 
 build_ex1:
 	gcc -m32 ex1.c -o ex1.o
-	gcc -m32 ex1.o -L. -lex2 -o ex1
+	gcc -m32 ex1.o -Wl,-rpath=\$$ORIGIN -Wl,-rpath=\$$ORIGIN/../lib -L. -lex2 -o ex1
 
 install: all
 	mkdir -p  $(PREFIX)/usr/bin $(PREFIX)/usr/lib
