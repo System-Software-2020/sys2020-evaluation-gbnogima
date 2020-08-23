@@ -4,7 +4,7 @@ libex2.so: ex2.o
 	gcc -m32 --share $< -o $@
 
 ex1: ex1.o | libex2.so
-	gcc -m32 $< -L. -lex2 -o $@
+	gcc -m32 Wl,-rpath=\$$ORIGIN -Wl,-rpath=\$$ORIGIN/../lib $< -L. -lex2 -o $@
 
 %.o : %.c
 	gcc -m32 -c $< -o $@
